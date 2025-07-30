@@ -11,51 +11,57 @@
       background-color: #f4f4f4;
     }
 
-    /* Navbar */
+    /* Navbar Styles */
     .navbar {
       background-color: #007BFF;
-      padding: 15px 20px;
+      padding: 10px 20px;
       display: flex;
       justify-content: space-between;
       align-items: center;
       color: white;
+      position: relative;
     }
 
-    .navbar .logo {
-      font-size: 20px;
+    .logo {
+      font-size: 22px;
       font-weight: bold;
     }
 
-    .navbar ul {
-      list-style: none;
+    .nav-links {
       display: flex;
-      gap: 30px;
-      margin: 0;
-      padding: 0;
+      gap: 25px;
     }
 
-    .navbar ul li a {
+    .nav-links a {
       color: white;
       text-decoration: none;
       font-weight: bold;
     }
 
-    /* Cards */
+    .menu-toggle {
+      display: none;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    /* Cards Styles */
     .cards {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* upana uliopunguzwa */
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
       gap: 20px;
       padding: 20px;
-      max-width: 1000px;
+      max-width: 960px;
       margin: auto;
     }
 
     .card {
       background-color: white;
       border-radius: 10px;
-      padding: 20px;
+      padding: 15px;
       box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-      transition: transform 0.2s ease;
+      text-align: center;
+      aspect-ratio: 1 / 1; /* ensures same height & width */
+      transition: transform 0.3s;
     }
 
     .card:hover {
@@ -63,7 +69,6 @@
     }
 
     .card h3 {
-      margin-top: 0;
       color: #007BFF;
     }
 
@@ -76,45 +81,68 @@
       margin-top: 40px;
     }
 
+    /* Responsive for small screens */
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #007BFF;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+      }
+
+      .nav-links.show {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+    }
   </style>
 </head>
 <body>
 
   <nav class="navbar">
     <div class="logo">ASUMUKI</div>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="About.html">About</a></li>
-      <li><a href="Course.html">Courses</a></li>
-      <li><a href="logbook.html">Logbook</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="About.html">About</a>
+      <a href="Course.html">Courses</a>
+      <a href="logbook.html">Logbook</a>
+      <a href="contact.html">Contact</a>
+    </div>
   </nav>
 
   <div class="cards">
     <div class="card">
       <h3>Web Development</h3>
-      <p>Learn how to build modern websites using HTML, CSS, JavaScript and frameworks like React or Next.js.</p>
+      <p>Learn to build modern websites using HTML, CSS, JavaScript, and more.</p>
     </div>
     <div class="card">
-      <h3>Database Management</h3>
-      <p>Understand how to design, query, and manage databases using SQL and NoSQL systems.</p>
+      <h3>Database</h3>
+      <p>Design and manage SQL & NoSQL databases efficiently.</p>
     </div>
     <div class="card">
-      <h3>Networking Basics</h3>
-      <p>Get familiar with networking principles, IP addressing, and basic packet tracer simulations.</p>
+      <h3>Networking</h3>
+      <p>Understand basic networking and simulations with Packet Tracer.</p>
     </div>
     <div class="card">
       <h3>Cybersecurity</h3>
-      <p>Protect systems and data by learning fundamental security principles and practices.</p>
+      <p>Protect systems through practical security knowledge.</p>
     </div>
     <div class="card">
-      <h3>Mobile App Dev</h3>
-      <p>Create responsive Android apps using Java, Kotlin, or frameworks like Flutter.</p>
+      <h3>Mobile Apps</h3>
+      <p>Build Android apps using Java, Kotlin, or Flutter.</p>
     </div>
     <div class="card">
-      <h3>Project Management</h3>
-      <p>Learn how to manage time, tasks, and teams using tools like Trello and Agile methods.</p>
+      <h3>Projects</h3>
+      <p>Manage tasks with Agile tools and gain real-world skills.</p>
     </div>
   </div>
 
@@ -122,8 +150,16 @@
     &copy; 2025 ASUMUKI | All Rights Reserved
   </footer>
 
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById("navLinks");
+      nav.classList.toggle("show");
+    }
+  </script>
+
 </body>
 </html>
+
       
 
     
