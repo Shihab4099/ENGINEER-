@@ -15,6 +15,7 @@
       background-color: #007BFF;
       padding: 1rem;
       display: flex;
+      flex-wrap: wrap;
       justify-content: space-between;
       align-items: center;
       color: white;
@@ -25,32 +26,50 @@
       font-size: 1.5rem;
     }
 
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
     .nav-links a {
       color: white;
       text-decoration: none;
-      margin-left: 20px;
       font-weight: bold;
     }
 
     .container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      padding: 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 20px;
+      padding: 20px;
     }
 
     .card {
       background-color: white;
       border-radius: 10px;
       padding: 20px;
-      width: 300px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 
     .card h3 {
       margin-top: 0;
       color: #007BFF;
+    }
+
+    footer {
+      background-color: #007BFF;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 20px;
+    }
+
+    @media (max-width: 500px) {
+      .nav-links {
+        flex-direction: column;
+        align-items: flex-start;
+      }
     }
   </style>
 </head>
@@ -63,27 +82,41 @@
       <a href="About.html">About</a>
       <a href="Course.html">Course</a>
       <a href="logbook.html">Logbook</a>
+      <a href="contact.html">Contact</a>
     </div>
   </div>
 
   <div class="container">
     <div class="card">
       <h3>Dreams and Vision</h3>
-      <p>I will become a professional in web development. I believe in consistent learning and practical projects to sharpen my skills.</p>
+      <p>I aim to become a professional web developer. Learning consistently and building projects helps sharpen my skills.</p>
     </div>
     <div class="card">
       <h3>Passion for Coding</h3>
-      <p>My passion for coding grows each day. I enjoy building things from scratch and turning ideas into real applications.</p>
+      <p>My love for coding grows daily. I enjoy creating things from scratch and turning ideas into real web apps.</p>
     </div>
     <div class="card">
-      <h3>My Focus</h3>
-      <p>Right now, I am focused on mastering HTML, CSS, JavaScript and frameworks like Next.js to create responsive and dynamic websites.</p>
+      <h3>Focus and Growth</h3>
+      <p>I’m currently focused on HTML, CSS, JS and frameworks like Next.js to build dynamic websites.</p>
     </div>
     <div class="card">
       <h3>Consistency</h3>
-      <p>I set daily goals for learning and practice. One step at a time, I am moving closer to becoming a successful web developer.</p>
+      <p>By setting daily coding goals, I continue to grow step by step into a successful developer.</p>
+    </div>
+    <div class="card">
+      <h3>Teamwork</h3>
+      <p>I believe in collaboration. Working with others helps build better solutions and learn faster.</p>
+    </div>
+    <div class="card">
+      <h3>Creativity</h3>
+      <p>I love experimenting with designs and features to make unique and user-friendly web experiences.</p>
     </div>
   </div>
 
+  <footer>
+    &copy; 2025 ASUMUKI | All Rights Reserved.
+  </footer>
+
 </body>
 </html>
+
