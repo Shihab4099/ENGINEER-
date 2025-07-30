@@ -3,167 +3,128 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Home | ASUMUKI</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <title>ASUMUKI Home</title>
   <style>
-    * {
-      box-sizing: border-box;
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: #007BFF;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: white;
+    }
+
+    .navbar .logo {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
       margin: 0;
       padding: 0;
     }
 
-    body {
-      font-family: Arial, sans-serif;
-      background: #f4f4f4;
-      color: #333;
-    }
-
-    nav {
-      background-color: #007BFF;
-      padding: 12px 0;
-    }
-
-    nav ul {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      list-style: none;
-      padding: 0;
-    }
-
-    nav ul li {
-      margin: 0 15px;
-    }
-
-    nav ul li a {
+    .navbar ul li a {
       color: white;
       text-decoration: none;
       font-weight: bold;
-      font-size: 15px;
     }
 
-    header {
-      text-align: center;
-      padding: 30px 20px;
-      background: white;
-    }
-
-    header h1 {
-      font-size: 28px;
-      color: #007BFF;
-      margin-bottom: 10px;
-    }
-
-    header p {
-      font-size: 16px;
-      color: #666;
-    }
-
-    .cards-container {
+    /* Cards */
+    .cards {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 18px;
-      padding: 30px 20px;
-      max-width: 920px;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* upana uliopunguzwa */
+      gap: 20px;
+      padding: 20px;
+      max-width: 1000px;
       margin: auto;
     }
 
     .card {
       background-color: white;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      padding: 16px;
-      min-height: 130px;
-      transition: transform 0.3s;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease;
     }
 
     .card:hover {
-      transform: translateY(-5px);
+      transform: scale(1.03);
     }
 
-    .card h2 {
-      font-size: 17px;
+    .card h3 {
+      margin-top: 0;
       color: #007BFF;
-      margin-bottom: 8px;
     }
 
-    .card p {
-      font-size: 13.5px;
-      color: #555;
-      line-height: 1.4;
-    }
-
+    /* Footer */
     footer {
       background-color: #007BFF;
       color: white;
       text-align: center;
-      padding: 12px;
-      font-size: 14px;
+      padding: 15px 10px;
       margin-top: 40px;
     }
 
-    @media (max-width: 600px) {
-      .card {
-        min-height: auto;
-      }
-
-      header h1 {
-        font-size: 22px;
-      }
-
-      header p {
-        font-size: 14px;
-      }
-    }
   </style>
 </head>
 <body>
 
-  <nav>
+  <nav class="navbar">
+    <div class="logo">ASUMUKI</div>
     <ul>
       <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="course.html">Course</a></li>
+      <li><a href="About.html">About</a></li>
+      <li><a href="Course.html">Courses</a></li>
       <li><a href="logbook.html">Logbook</a></li>
-      <li><strong style="color: white;">ASUMUKI</strong></li>
+      <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
 
-  <header>
-    <h1>Welcome to ASUMUKI</h1>
-    <p>Your path to professional web development starts here.</p>
-  </header>
-
-  <section class="cards-container">
+  <div class="cards">
     <div class="card">
-      <h2>HTML Basics</h2>
-      <p>Understand how to structure your webpage using HTML elements.</p>
+      <h3>Web Development</h3>
+      <p>Learn how to build modern websites using HTML, CSS, JavaScript and frameworks like React or Next.js.</p>
     </div>
     <div class="card">
-      <h2>CSS Styling</h2>
-      <p>Learn how to design and style beautiful layouts using CSS.</p>
+      <h3>Database Management</h3>
+      <p>Understand how to design, query, and manage databases using SQL and NoSQL systems.</p>
     </div>
     <div class="card">
-      <h2>Responsive Design</h2>
-      <p>Make your website look good on all devices, from phones to desktops.</p>
+      <h3>Networking Basics</h3>
+      <p>Get familiar with networking principles, IP addressing, and basic packet tracer simulations.</p>
     </div>
     <div class="card">
-      <h2>JavaScript Logic</h2>
-      <p>Bring your website to life using interactive JavaScript features.</p>
+      <h3>Cybersecurity</h3>
+      <p>Protect systems and data by learning fundamental security principles and practices.</p>
     </div>
     <div class="card">
-      <h2>Project Building</h2>
-      <p>Create real-world projects to build your portfolio and gain skills.</p>
+      <h3>Mobile App Dev</h3>
+      <p>Create responsive Android apps using Java, Kotlin, or frameworks like Flutter.</p>
     </div>
     <div class="card">
-      <h2>Dream Big!</h2>
-      <p>I will become a professional web developer. It's my dream, and I'm working for it.</p>
+      <h3>Project Management</h3>
+      <p>Learn how to manage time, tasks, and teams using tools like Trello and Agile methods.</p>
     </div>
-  </section>
+  </div>
 
   <footer>
-    &copy; 2025 ASUMUKI. All rights reserved.
+    &copy; 2025 ASUMUKI | All Rights Reserved
   </footer>
 
 </body>
 </html>
+      
+
+    
+  
