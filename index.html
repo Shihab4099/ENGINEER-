@@ -3,120 +3,167 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>ASUMUKI | Home</title>
+  <title>Home | ASUMUKI</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <style>
-    body {
+    * {
+      box-sizing: border-box;
       margin: 0;
+      padding: 0;
+    }
+
+    body {
       font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
+      background: #f4f4f4;
+      color: #333;
     }
 
-    .navbar {
+    nav {
       background-color: #007BFF;
-      padding: 1rem;
+      padding: 12px 0;
+    }
+
+    nav ul {
       display: flex;
+      justify-content: center;
       flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center;
-      color: white;
+      list-style: none;
+      padding: 0;
     }
 
-    .logo {
-      font-weight: bold;
-      font-size: 1.5rem;
+    nav ul li {
+      margin: 0 15px;
     }
 
-    .nav-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 15px;
-    }
-
-    .nav-links a {
+    nav ul li a {
       color: white;
       text-decoration: none;
       font-weight: bold;
+      font-size: 15px;
     }
 
-    .container {
+    header {
+      text-align: center;
+      padding: 30px 20px;
+      background: white;
+    }
+
+    header h1 {
+      font-size: 28px;
+      color: #007BFF;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 16px;
+      color: #666;
+    }
+
+    .cards-container {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      padding: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 18px;
+      padding: 30px 20px;
+      max-width: 920px;
+      margin: auto;
     }
 
     .card {
       background-color: white;
-      border-radius: 10px;
-      padding: 20px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      padding: 16px;
+      min-height: 130px;
+      transition: transform 0.3s;
     }
 
-    .card h3 {
-      margin-top: 0;
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h2 {
+      font-size: 17px;
       color: #007BFF;
+      margin-bottom: 8px;
+    }
+
+    .card p {
+      font-size: 13.5px;
+      color: #555;
+      line-height: 1.4;
     }
 
     footer {
       background-color: #007BFF;
       color: white;
       text-align: center;
-      padding: 1rem;
-      margin-top: 20px;
+      padding: 12px;
+      font-size: 14px;
+      margin-top: 40px;
     }
 
-    @media (max-width: 500px) {
-      .nav-links {
-        flex-direction: column;
-        align-items: flex-start;
+    @media (max-width: 600px) {
+      .card {
+        min-height: auto;
+      }
+
+      header h1 {
+        font-size: 22px;
+      }
+
+      header p {
+        font-size: 14px;
       }
     }
   </style>
 </head>
 <body>
 
-  <div class="navbar">
-    <div class="logo">ASUMUKI</div>
-    <div class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="About.html">About</a>
-      <a href="Course.html">Course</a>
-      <a href="logbook.html">Logbook</a>
-      <a href="contact.html">Contact</a>
-    </div>
-  </div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="course.html">Course</a></li>
+      <li><a href="logbook.html">Logbook</a></li>
+      <li><strong style="color: white;">ASUMUKI</strong></li>
+    </ul>
+  </nav>
 
-  <div class="container">
+  <header>
+    <h1>Welcome to ASUMUKI</h1>
+    <p>Your path to professional web development starts here.</p>
+  </header>
+
+  <section class="cards-container">
     <div class="card">
-      <h3>Dreams and Vision</h3>
-      <p>I aim to become a professional web developer. Learning consistently and building projects helps sharpen my skills.</p>
+      <h2>HTML Basics</h2>
+      <p>Understand how to structure your webpage using HTML elements.</p>
     </div>
     <div class="card">
-      <h3>Passion for Coding</h3>
-      <p>My love for coding grows daily. I enjoy creating things from scratch and turning ideas into real web apps.</p>
+      <h2>CSS Styling</h2>
+      <p>Learn how to design and style beautiful layouts using CSS.</p>
     </div>
     <div class="card">
-      <h3>Focus and Growth</h3>
-      <p>I’m currently focused on HTML, CSS, JS and frameworks like Next.js to build dynamic websites.</p>
+      <h2>Responsive Design</h2>
+      <p>Make your website look good on all devices, from phones to desktops.</p>
     </div>
     <div class="card">
-      <h3>Consistency</h3>
-      <p>By setting daily coding goals, I continue to grow step by step into a successful developer.</p>
+      <h2>JavaScript Logic</h2>
+      <p>Bring your website to life using interactive JavaScript features.</p>
     </div>
     <div class="card">
-      <h3>Teamwork</h3>
-      <p>I believe in collaboration. Working with others helps build better solutions and learn faster.</p>
+      <h2>Project Building</h2>
+      <p>Create real-world projects to build your portfolio and gain skills.</p>
     </div>
     <div class="card">
-      <h3>Creativity</h3>
-      <p>I love experimenting with designs and features to make unique and user-friendly web experiences.</p>
+      <h2>Dream Big!</h2>
+      <p>I will become a professional web developer. It's my dream, and I'm working for it.</p>
     </div>
-  </div>
+  </section>
 
   <footer>
-    &copy; 2025 ASUMUKI | All Rights Reserved.
+    &copy; 2025 ASUMUKI. All rights reserved.
   </footer>
 
 </body>
 </html>
-
