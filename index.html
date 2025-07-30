@@ -18,28 +18,64 @@
       justify-content: space-between;
       align-items: center;
       flex-wrap: wrap;
+      position: relative;
     }
 
-    .navbar .logo {
+    .logo {
       color: white;
       font-size: 20px;
       font-weight: bold;
-      text-transform: uppercase;
     }
 
-    .navbar ul {
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .menu-toggle span {
+      height: 3px;
+      width: 25px;
+      background: white;
+      margin: 4px 0;
+      border-radius: 2px;
+    }
+
+    .nav-links {
       list-style: none;
       display: flex;
-      flex-wrap: wrap;
-      margin: 0;
-      padding: 0;
       gap: 20px;
     }
 
-    .navbar ul li a {
+    .nav-links li a {
       color: white;
       text-decoration: none;
       font-weight: bold;
+    }
+
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: flex;
+      }
+
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #007BFF;
+        position: absolute;
+        top: 60px;
+        left: 0;
+      }
+
+      .nav-links.show {
+        display: flex;
+      }
+
+      .nav-links li {
+        padding: 10px 20px;
+        border-top: 1px solid #fff;
+      }
     }
 
     .cards-container {
@@ -75,20 +111,18 @@
       padding: 15px;
       margin-top: 30px;
     }
-
-    @media (max-width: 600px) {
-      .navbar ul {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-    }
   </style>
 </head>
 <body>
 
   <nav class="navbar">
     <div class="logo">ASUMUKI</div>
-    <ul>
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <ul class="nav-links" id="navLinks">
       <li><a href="index.html">Home</a></li>
       <li><a href="About.html">About</a></li>
       <li><a href="Course.html">Courses</a></li>
@@ -128,8 +162,17 @@
     &copy; 2025 ASUMUKI - All Rights Reserved
   </footer>
 
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById("navLinks");
+      nav.classList.toggle("show");
+    }
+  </script>
+
 </body>
 </html>
+
+
 
       
 
