@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Welcome to My Website</title>
+  <title>ASUMUKI | Home</title>
   <style>
     body {
       margin: 0;
@@ -13,49 +13,76 @@
 
     .navbar {
       background-color: #007BFF;
-      padding: 15px;
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       color: white;
-      text-align: center;
-      font-size: 24px;
+    }
+
+    .logo {
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
       font-weight: bold;
     }
 
-    .main-content {
-      padding: 30px;
-      text-align: center;
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 20px;
+      gap: 20px;
     }
 
-    .main-content h1 {
-      color: #333;
+    .card {
+      background-color: white;
+      border-radius: 10px;
+      padding: 20px;
+      width: 300px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 
-    .main-content p {
-      font-size: 18px;
-      color: #555;
-      max-width: 700px;
-      margin: 0 auto;
-      line-height: 1.6;
+    .card h3 {
+      margin-top: 0;
+      color: #007BFF;
     }
   </style>
 </head>
 <body>
 
   <div class="navbar">
-    WELCOME TO MY WEB DEVELOPMENT JOURNEY
+    <div class="logo">ASUMUKI</div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="About.html">About</a>
+      <a href="Course.html">Course</a>
+      <a href="logbook.html">Logbook</a>
+    </div>
   </div>
 
-  <div class="main-content">
-    <h1>Creating Modern and Attractive Websites</h1>
-    <p>
-      My dream is to become a professional in web development. I am passionate about designing 
-      clean, fast, and functional websites that solve real-world problems. <br><br>
-
-      I believe in continuous learning and improvement. This website marks the beginning of my journey 
-      to build amazing platforms and contribute to the tech world. <br><br>
-
-      My goal is to help businesses and individuals grow online by providing beautiful and powerful web solutions. 
-      Keep watching — something big is coming!
-    </p>
+  <div class="container">
+    <div class="card">
+      <h3>Dreams and Vision</h3>
+      <p>I will become a professional in web development. I believe in consistent learning and practical projects to sharpen my skills.</p>
+    </div>
+    <div class="card">
+      <h3>Passion for Coding</h3>
+      <p>My passion for coding grows each day. I enjoy building things from scratch and turning ideas into real applications.</p>
+    </div>
+    <div class="card">
+      <h3>My Focus</h3>
+      <p>Right now, I am focused on mastering HTML, CSS, JavaScript and frameworks like Next.js to create responsive and dynamic websites.</p>
+    </div>
+    <div class="card">
+      <h3>Consistency</h3>
+      <p>I set daily goals for learning and practice. One step at a time, I am moving closer to becoming a successful web developer.</p>
+    </div>
   </div>
 
 </body>
